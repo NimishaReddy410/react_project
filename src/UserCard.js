@@ -24,8 +24,16 @@ const UserCard = ({ userData }) => {
     }
   };
 
+  const formatPhoneNumber = (phoneNumber) => {
+    const cleaned = ("" + phoneNumber).replace(/\D/g, "");
+    const match = cleaned.match(/^(\d{3})(\d{3})(\d{4})$/);
+    if (match) {
+      return `(${match[1]}) ${match[2]}-${match[3]}`;
+    }
+    return phoneNumber;
+  };
+
   return (
-    <>
     <div className="card">
       <div className="card__body">
         <div className={`card__icon ${getIconColor()}`}>
@@ -38,18 +46,27 @@ const UserCard = ({ userData }) => {
           <div className="card__role">{userData.role}</div>
           <div className="card__email">{userData.email}</div>
           {expanded && (
-        <div className="card__details">
-          <div className="card__detail-header">Address:</div>
-          <div className="card__detail-item">{userData.street}, {userData.city}, {userData.state} {userData.zip}
-          </div>
-          <div className="card__detail-header">Phone:</div>
-          <div className="card__detail-item">{userData.phone}</div>
-          <div className="card__detail-header">Created At:</div>
-          <div className="card__detail-item">{new Date(userData.createdAt).toDateString()}</div>
-          <div className="card__detail-header">Last Logged In:</div>
-          <div className="card__detail-item">{new Date(userData.lastLoggedIn).toDateString()}</div>
-        </div>
-      )}
+            <div className="card__details">
+              <div className="card__detail-header">Address:</div>
+              <div className="card__detail-item">
+                {userData.street}, {userData.city}, {userData.state} {userData.zip}
+              </div>
+              <div className="card__detail-header">Phone:</div>
+              <div className="card__detail-item">
+                {formatPhoneNumber(userData.phone)}
+              </div>
+              <div className="card__detail-header">Created At:</div>
+              <div className="card__detail-item">
+                {new Date(userData.createdAt).toLocaleDateString()}{" "}
+                {new Date(userData.createdAt).toLocaleTimeString()}
+              </div>
+              <div className="card__detail-header">Last Logged In:</div>
+              <div className="card__detail-item">
+                {new Date(userData.lastLoggedIn).toLocaleDateString()}{" "}
+                {new Date(userData.lastLoggedIn).toLocaleTimeString()}
+              </div>
+            </div>
+          )}
         </div>
         <span
           className={`expand-icon ${expanded ? "expanded" : ""}`}
@@ -62,9 +79,7 @@ const UserCard = ({ userData }) => {
           )}
         </span>
       </div>
-      
     </div>
-    </>
   );
 };
 

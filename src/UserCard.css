@@ -1,88 +1,87 @@
 .card {
-    margin: 5px 5px 16px 0px;
-    padding: 1.5rem;
-    width: 350px; /* Increase the width as desired */
-    box-shadow: 0 0 28px 4px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
-    cursor: pointer;
-  }
-  
-  .card:hover {
-    transform: scale(1.1);
-  }
-  
-  .card__body{
-    display: flex;
-    max-height: 270px;
-    min-height: 80px;
-  }
-  
-  .card__icon {
-    width: 64px;
-    height: 64px;
-    margin-right: 16px;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .card__icon.blue {
-    background-color: #2081C3;
-  }
-  
-  .card__icon.green {
-    background-color: #68AAAB;
-  }
-  
-  .card__icon.grey {
-    background-color: #7E7E7E;
-  }
-  
-  .card__content {
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .card__name {
-    font-weight: bold;
-    font-size: 1.5rem;
-  }
-  
-  .card__role {
-    font-size: 0.8rem;
-    margin-top: 0.5rem;
-  }
-  
-  .card__email {
-    font-size: 10px;
-    margin-top: 0.25rem;
-    color: #7E7E7E;
-  }
-  
-  .expand-icon {
-    margin-left: auto;
-  }
-  
-  .expand-icon img {
-    width: 20px;
-    height: 20px;
-  }
-  
-  .card__details {
-    margin-top: 1rem; /* Add some spacing between the body and details */
-  }
-  
-  .card__detail-header {
-    font-weight: 700;
-    font-size: 12px;
-    color: #4a4a4a;
-    margin-bottom: 0.25rem; /* Add some spacing below the header */
-  }
-  
-  .card__detail-item {
-    font-size: 10px;
-    color: #4a4a4a;
-    margin-bottom: 0.5rem; /* Add some spacing below each detail item */
-  }
-    
+  margin: 5px 5px 16px 0px;
+  padding: 24px;
+  width: 350px; /* Increase the width as desired */
+  box-shadow: 0px 0px 28px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.card:hover {
+  transform: scale(1.1);
+}
+
+.card__body {
+  display: flex;
+  max-height: 270px;
+  min-height: 80px;
+}
+
+.card__icon {
+  width: 64px;
+  height: 64px;
+  margin-right: 16px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card__icon.blue {
+  background-color: #2081C3;
+}
+
+.card__icon.green {
+  background-color: #68AAAB;
+}
+
+.card__icon.grey {
+  background-color: #7E7E7E;
+}
+
+.card__content {
+  display: flex;
+  flex-direction: column;
+}
+
+.card__name {
+  font-weight: bold;
+  font-size: 24px;
+}
+
+.card__role {
+  font-size: 12px;
+  margin-top: 5px;
+}
+
+.card__email {
+  font-size: 10px;
+  margin-top: 2.5px;
+  color: #7E7E7E;
+}
+
+.expand-icon {
+  margin-left: auto;
+}
+
+.expand-icon img {
+  width: 20px;
+  height: 20px;
+}
+
+.card__details {
+  margin-top: 16px;
+}
+
+.card__detail-header {
+  font-weight: 700;
+  font-size: 12px;
+  color: #4a4a4a;
+  margin-bottom: 2.5px;
+}
+
+.card__detail-item {
+  font-size: 10px;
+  color: #4a4a4a;
+  margin-bottom: 5px;
+}

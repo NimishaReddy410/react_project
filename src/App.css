@@ -10,8 +10,9 @@
 .navbar__icon {
   width: 32px;
   height: 32px;
+  /* border-radius: 50%; */
   margin-right: 8px;
-  fill: #2081C3 !important;
+  fill: #2081C3;
 }
 
 .navbar__heading {
